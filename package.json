@@ -1,0 +1,48 @@
+{
+  "name": "@astrologybazi/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for AstrologyBazi — Chinese astrology, BaZi readings, and decision-fortune reports as agent-callable tools.",
+  "type": "module",
+  "bin": {
+    "astrologybazi-mcp": "./build/index.js"
+  },
+  "files": ["build", "README.md"],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "preflight": "npm audit --audit-level=moderate && npm audit signatures && npm pack --dry-run",
+    "prepublishOnly": "npm run build && npm run preflight"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "astrology",
+    "bazi",
+    "chinese-astrology",
+    "fortune",
+    "claude",
+    "ai-agent"
+  ],
+  "author": "Sparksverse (Sisi & TH) <support@astrologybazi.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/sparksverse/astrologybazi-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparksverse/astrologybazi-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sparksverse/astrologybazi-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
