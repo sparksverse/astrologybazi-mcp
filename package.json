@@ -1,6 +1,7 @@
 {
   "name": "@astrologybazi/mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.sparksverse/astrologybazi-mcp",
   "description": "MCP server for AstrologyBazi — Chinese astrology, BaZi readings, and decision-fortune reports as agent-callable tools.",
   "type": "module",
   "bin": {
